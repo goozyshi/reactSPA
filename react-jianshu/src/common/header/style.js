@@ -26,7 +26,6 @@ export const NavWrapper = styled.div`
   display:flex;
 `
 export const Nav = styled.div`
-  dispaly:flex;
   width:945px;
   height:58 px;
 `
@@ -61,8 +60,10 @@ export const NavItem = styled.div`
   }
 `
 export const SearchWrapper = styled.div`
+  float:left;
   display:flex;
-  align-items:center;
+  flex-direction:column;
+  align-items:flex-start;
   .iconfont{
     font-size:20px;
   }
@@ -75,16 +76,16 @@ export const NavSearch = styled.input.attrs({
     transition: all .2s ease-out;
   }
   &.slide-enter-active {
-    width:240px;
+    width:320px;
   }
   &.slide-exit {
     transition: all .2s ease-in;
   }
   &.slide-exit-active {
-    width:180px;
+    width:240px;
   }
   box-sizing:border-box;
-  width:180px;
+  width:240px;
   height:38px;
   padding:0 40px 0 20px;
   margin:10px 0 0 15px   ;
@@ -98,17 +99,18 @@ export const NavSearch = styled.input.attrs({
     color:#999;
   }
   &.focused{
-    width:240px;
+    width:320px;
   }
 `
 export const IconWrapper = styled.div`
+  float:right;
   display:flex;
-  position:relative;
   justify-content:center;
   align-items:center;
+  position:relative;
+  top:14px;
+  right:30px;
   box-sizing:border-box;
-  top:5px;
-  right:40px;
   width:30px;
   height:30px;
   border-radius:15px;
@@ -116,6 +118,47 @@ export const IconWrapper = styled.div`
     background:#969696;
     color:#fff;
   }
+`
+export const SearchInfo = styled.div`
+  width:250px;
+  margin: 10px  20px;
+  padding: 20px 20px 10px 20px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 0 8px rgba(0,0,0,.2);
+  box-sizing: border-box;
+  .iconfont{
+    font-size: 13px;
+    color: #969696;
+  }
+`
+export const SearchInfoTitle = styled.div`
+  line-height: 20px;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #969696;
+`
+export const SearchInfoSwitch = styled.span`
+  float: right;
+  line-height: 20px;
+  margin: 10px 0;
+  font-size: 12px;
+  color: #969696;
+`
+export const SearchInfoList = styled.div`
+  overflow: hidden;
+`
+export const SearchInfoItem = styled.a`
+  display: block;
+  float: left;
+  line-height: 20px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #969696;
+  padding: 0 5px;
+  border: 1px solid #ddd;
+  border-radius:3px;
+
 `
 export const Addition = styled.div`
   display:flex;
