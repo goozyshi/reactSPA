@@ -120,12 +120,14 @@ export const IconWrapper = styled.div`
   }
 `
 export const SearchInfo = styled.div`
+  z-index:5555;
   width:250px;
   margin: 10px  20px;
   padding: 20px 20px 10px 20px;
   border: 1px solid #f0f0f0;
   box-shadow: 0 0 8px rgba(0,0,0,.2);
   box-sizing: border-box;
+  background: #fff;
   .iconfont{
     font-size: 13px;
     color: #969696;

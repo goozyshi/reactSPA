@@ -1,21 +1,36 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import { 
   TopicWrapper,
   TopicItem,
+  TopicText
 } from '../style';
 class Topic extends Component{
   render(){
     return(
       <TopicWrapper>
-        <TopicItem>
-          <img 
-            src='http://upload.jianshu.io/collections/images/14/6249340_194140034135_2.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64'
-            alt='sda'
-          />
-          @IT 互联网
-        </TopicItem>
+        { this.props.list.map((item) => {
+            return(
+              <TopicItem key={item.get('id')}>
+                <img className = 'topic-pic'
+                  src={item.get('img_url')} 
+                  alt='topic-pic'
+                  />
+                { item.get('title') }
+              </TopicItem>
+            )
+          })
+        }
+        <TopicText>
+          更多热门专题>
+        </TopicText>
       </TopicWrapper>
     )
   }
 }
-export default Topic;
+const mapStateToProps= (state) => ({
+    list: state.get('home').get('topicList')
+})
+
+export default connect(mapStateToProps, null)(Topic);

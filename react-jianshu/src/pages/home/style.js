@@ -6,7 +6,6 @@ export const HomeWrapper = styled.div`
   overflow: hidden;
 `
 export const HomeLeft = styled.div`
-  float: left;
   padding-top: 30px;
   width: 640px;
   borderRadius:'5px',
@@ -39,25 +38,80 @@ export const Button = styled.button`
     border-bottom-left-radius: 6px;
   }
 `
+/**
+ * Topic
+ */
 export const TopicWrapper = styled.div`
   overflow: hidden;
-  width: 625px;
-  height:104px;
-  margin-bottom: 40px;
-  line-height: 24px;
-  background: #fff;
-  padding: 30px 0 0;
+  float: left;
+  margin-top:20px;
+  padding: 20px 0 10px 0;
+  border-bottom: 1px solid #dcdcdc;
 `
 export const TopicItem = styled.div`
-  float: left;
   overflow: hidden;
+  float: left;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
   background: #f7f7f7;
   border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  padding-right: 10px;
   margin: 0 18px 18px 0;
-  padding: 30px 0 0;
-  line-height: 32px;
+  .topic-pic{
+    display: block;
+    float: left;
+    height:32px;
+    width: 32px;
+    margin-right: 10px;
+  }
+`
+export const TopicText = styled.a.attrs({
+  href:'https://www.jianshu.com/recommendations/collections?utm_medium=index-collections&utm_source=desktop'
+})`;
+  float: left;
+  font-size: 14px;
+  line-height: 32px;  
+  color: #787878;
+  text-decoration-line: none;
+`
+/**
+ * List
+ */
+export const ListItem = styled.div`
+  overflow: hidden;
+  float: left;
+  padding: 20px 0;
+  border-bottom: 1px solid #dcdcdc;
+  .list-pic{
+    display: block;
+    float: right;
+    width: 125px;
+    height: 100px;
+    margin-left:10px;
+  }
+`
+export const ListInfo = styled.div`
+  overflow: hidden;
+  float: left;
+  width: 500px;
+  .title{
+    line-height: 27px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 6px 0;
+  }
+  .desc{
+    line-height: 18px;
+    font-size: 13px;
+    color: #999;
+    margin: 0 0 8px ;
+  }
 `
 export const HomeRight = styled.div`
+  display: block;
   float: right;
   width: 280px;
   margin-left: 40px;

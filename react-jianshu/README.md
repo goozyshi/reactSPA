@@ -29,6 +29,8 @@ get()方法，获取fromJS对象里的属性
 使用immuta要注意数据格式的统一（普通数组、对象使用fromJS转为immutable数组、对象）
 ```
 
-### 进度(11.03-11.05)
-- ## Header布局+搜索框
+### 进度
+- ## Header布局+搜索框(11.03-11.05)
 ![header-searchbar](./demopng/header-searchbar.gif)
+- ## 标签、列表
+![list](./demopng/list.gif)
