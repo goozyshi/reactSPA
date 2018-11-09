@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import{
   ListItem,
   ListInfo,
+  LoadMore,
 } from '../style';
 class List extends Component{
   render(){
     return(
       <div>
-      {
-        this.props.desclist.map((item)=>{
+      { this.props.desclist.map((item)=>{
           return(
             <ListItem key={item.get('id')}>
               <img
@@ -25,6 +25,7 @@ class List extends Component{
           )
         })
       }
+      <LoadMore>阅读更多</LoadMore>
       </div>
     )
   }

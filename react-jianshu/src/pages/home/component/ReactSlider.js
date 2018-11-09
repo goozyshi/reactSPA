@@ -3,7 +3,7 @@ import {
   Button,
 } from '../style';
 import Carousel from 'nuka-carousel';
-const img1 = 'http://upload.jianshu.io/admin_banners/web_images/4531/a71b88d43f0d0a32d6790d43d68b1a4b19264a8f.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540';
+const img1 = 'https://upload.jianshu.io/admin_banners/web_images/4555/a34dbe6f8ac889163dd7980c18885554ba7939e5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540';
 const img2 = 'http://upload.jianshu.io/admin_banners/web_images/4529/d8d780d8dd4a32485655815c2cb4e367b61cb15c.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540';
 const img3 = 'http://upload.jianshu.io/admin_banners/web_images/4554/4a8e7a7c6f7767a8000859070b50902b9fae90d1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540';
 const img4 = 'http://upload.jianshu.io/admin_banners/web_images/4535/c4ef5054e0e08459ba8d548c035a1306e97820a9.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540';
@@ -36,19 +36,21 @@ class ReactSlider extends Component {
   }
   render(){
     return(
-      <Carousel {...props_setting}
-        renderCenterLeftControls={({ previousSlide }) => this.LeftControl({ previousSlide })}   
-        renderCenterRightControls={({ nextSlide }) => this.RightControl({ nextSlide })}
-      >
-      <img src={img1} alt='img1' style={{borderRadius:'5px'}} />
-      <img src={img2} alt='img2' style={{borderRadius:'5px'}} />
-      <img src={img3} alt='img3' style={{borderRadius:'5px'}} />
-      <img src={img4} alt='img4' style={{borderRadius:'5px'}} />
-      <img src={img5} alt='img5' style={{borderRadius:'5px'}} />
-      <img src={img6} alt='img6' style={{borderRadius:'5px'}} />
-      <img src={img7} alt='img7' style={{borderRadius:'5px'}} />
-      <img src={img8} alt='img8' style={{borderRadius:'5px'}} />
-    </Carousel>
+      <div>
+        <Carousel {...props_setting}
+          renderCenterLeftControls={({ previousSlide }) => this.LeftControl({ previousSlide })}   
+          renderCenterRightControls={({ nextSlide }) => this.RightControl({ nextSlide })}
+        >
+        <img src={img1} alt='img1' style={{borderRadius:'5px'}} />
+        <img src={img2} alt='img2' style={{borderRadius:'5px'}} />
+        <img src={img3} alt='img3' style={{borderRadius:'5px'}} />
+        <img src={img4} alt='img4' style={{borderRadius:'5px'}} />
+        <img src={img5} alt='img5' style={{borderRadius:'5px'}} />
+        <img src={img6} alt='img6' style={{borderRadius:'5px'}} />
+        <img src={img7} alt='img7' style={{borderRadius:'5px'}} />
+        <img src={img8} alt='img8' style={{borderRadius:'5px'}} />
+      </Carousel>
+      </div>
     )
   }
 }
