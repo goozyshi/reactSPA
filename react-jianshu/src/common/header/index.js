@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { actionCreators }  from './store';
 import { 
@@ -52,12 +53,14 @@ class Header extends Component{
     }
   }
   render(){
-    const { focused, list, handleFocus, handleBlur } = this.props;
+    const { focused, list, handleFocus, handleBlur, logined } = this.props;
     return(
       <div>
         <HeaderWrapper>
           <Wrapper>
-            <Logo />
+            <Link to='/'>
+              <Logo />
+            </Link>
             <NavWrapper>
               <Nav>
                 <NavItem className="left active">
@@ -68,7 +71,15 @@ class Header extends Component{
                   <i className = "iconfont">&#xe601;</i>
                   下载App
                 </NavItem>
-                <NavItem className="right login">登录</NavItem>
+                { logined ?
+                  <Link to = '/'>
+                    <NavItem className="right login">退出</NavItem>
+                  </Link>
+                  :
+                  <Link to = '/login'>
+                    <NavItem className="right login">登录</NavItem>
+                  </Link>
+                }
                 <NavItem className="right">
                   <i className = "iconfont">&#xe636;</i>
                 </NavItem>
@@ -92,7 +103,7 @@ class Header extends Component{
                 </SearchWrapper>
               </Nav>
               <Addition>
-                <Button className="reg">注册</Button>
+                { logined && <Button className="reg">注册</Button> }
                 <Button>
                   <i className = "iconfont">&#xe600;</i>
                   写文章
@@ -112,6 +123,7 @@ const mapStateToProps = (state) =>{
     page: state.getIn(['header','page']),
     mouseIn: state.getIn(['header','mouseIn']),
     totalpage: state.getIn(['header','totalpage']),
+    logined: state.getIn([ 'header', 'logined'])
   }
 }
 const mapDispatchToProps = (dispatch)=>{

@@ -27,6 +27,9 @@ export const getList = () =>{
     })
   }
 }
+export const Login = () =>({
+  type: actionTypes.CHANGELOGIN,
+})
 export const mouseEnter = () =>({
   type: actionTypes.MOUSEENTER,
 })

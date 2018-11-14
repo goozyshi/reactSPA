@@ -30,6 +30,8 @@ get()方法，获取fromJS对象里的属性
 ```
 
 ### 进度
+- ## 完善详情页，登录等(11.14)
+![whole](./demopng/whole.gif)
 - ## 首页-动画(11.09)
 ![index](./demopng/index.gif)
 - ## 标签、列表(11.06-11.08)

@@ -12,9 +12,7 @@ export const Wrapper = styled.div`
   width:1440px;
   height:57 px;
 `
-export const Logo = styled.a.attrs({
-  href: '/'
-})`
+export const Logo = styled.div`
   display:block;
   float:left;
   height:56px;

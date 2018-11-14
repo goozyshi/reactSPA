@@ -1,4 +1,4 @@
-import React,{ Component } from 'react';
+import React,{  PureComponent } from 'react';
 import {
   Button,
 } from '../style';
@@ -19,7 +19,7 @@ const props_setting = {
 }
 
 
-class ReactSlider extends Component {
+class ReactSlider extends  PureComponent {
   LeftControl = ({previousSlide}) =>{
     return(
       <Button onClick={previousSlide} className='left'>
