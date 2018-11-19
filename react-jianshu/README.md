@@ -1,4 +1,10 @@
 # React简书流程
+## Install
+```bash
+npm i --save
+npm i react-router-dom --save
+```
+## Demo
 # 一.Header部分
 1. 初始化项目：
 ```bash
